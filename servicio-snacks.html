@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Mesa de Snacks | Fiestas & Dulces</title>
+  <title>Mesa de Snacks | Cosmos Arte y Sabor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
@@ -11,6 +11,72 @@
   <link rel="stylesheet" href="plugins/venobox/venobox.css">
   <link rel="stylesheet" href="plugins/card-slider/css/style.css">
   <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    /* Galería simple, consistente con tu template */
+    .gallery-card{
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      transform: translateY(0);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .gallery-card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.12);
+    }
+    .gallery-thumb{
+      position: relative;
+      width: 100%;
+      padding-top: 70%;
+      background: #f6f6f6;
+    }
+    .gallery-thumb img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .gallery-overlay{
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,.35);
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+    .gallery-thumb:hover .gallery-overlay{ opacity: 1; }
+    .gallery-icon{
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.95);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #000;
+    }
+    .gallery-caption{
+      padding: 12px 14px;
+      border-top: 1px solid rgba(0,0,0,.05);
+    }
+    .gallery-caption small{ opacity: .8; }
+
+    .pill{
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.06);
+      font-size: 12px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+  </style>
 </head>
 
 <body>
@@ -18,51 +84,148 @@
 <div id="site-header"></div>
 
 <section class="page-title bg-cover" data-background="images/backgrounds/page-title.jpg">
-  <div class="container"><div class="row"><div class="col-12 text-center">
-    <h1 class="display-1 text-white font-weight-bold">Mesa de Snacks</h1>
-  </div></div></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="display-1 text-white font-weight-bold">Mesa de Snacks</h1>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="row mb-5">
 
+    <div class="row mb-5">
       <div class="col-lg-8">
-        <h2 class="section-title">Botanas para todos los gustos</h2>
+        <h2 class="section-title">Botanas que se antojan… y se ven bien</h2>
+
+        <div class="mb-3">
+          <span class="pill">🧺 Variedad para todos</span>
+          <span class="pill">🎨 Se adapta a tu temática</span>
+          <span class="pill">🥭 Dulce / salado / saludable</span>
+          <span class="pill">✨ Presentación cuidada</span>
+        </div>
+
         <p class="lead">
-          La mesa de snacks es perfecta para que tus invitados puedan botanear todo el evento. Ideal
-          para fiestas infantiles, reuniones familiares, terrazas y eventos pequeños.
+          Una mesa de snacks le da vida a cualquier reunión: tus invitados botanéan a su ritmo, se sirven cuando quieren
+          y la mesa se vuelve un punto de convivencia (y de fotos). Perfecta para fiestas infantiles, reuniones familiares,
+          terrazas y eventos pequeños.
         </p>
 
-        <h4 class="mt-4">Incluye</h4>
+        <p>
+          Nuestra base es un carrito estilo madera que se ve súper cálido, y además lo podemos “vestir” con telas y detalles
+          para que combine con tus colores. La idea es que no solo sea botana: sea parte de la decoración.
+        </p>
+
+        <h4 class="mt-4">¿Qué puedes esperar?</h4>
         <ul class="list-unstyled">
-          <li>• Papas de sabores.</li>
-          <li>• Palomitas.</li>
-          <li>• Botanas saladas y enchiladas.</li>
-          <li>• Gomitas picositas.</li>
-          <li>• Salsas y toppings.</li>
-          <li>• Vasitos, servilletas y decoración básica.</li>
+          <li>• Una selección amplia para que haya variedad y opciones para todos.</li>
+          <li>• Presentación lista para servir (vasitos, servilletas y montaje).</li>
+          <li>• Salsas, toppings y extras para hacerla más divertida.</li>
+          <li>• Ajustes por temática: colores, estilo y “look” general.</li>
         </ul>
 
-        <h4 class="mt-4">Opciones adicionales</h4>
+        <h4 class="mt-4">Elige tu estilo de mesa</h4>
         <ul class="list-unstyled">
-          <li>• Chamoyadas y bebidas frías.</li>
-          <li>• Papas preparadas.</li>
-          <li>• Mesa temática con colores específicos.</li>
+          <li>• <strong>Dulce:</strong> gomitas, snacks con chamoy y antojitos dulces.</li>
+          <li>• <strong>Saladita:</strong> papas, botanas enchiladas y mix de sabores.</li>
+          <li>• <strong>Más saludable:</strong> opciones ligeras y variedad balanceada.</li>
+          <li>• <strong>Mix:</strong> un poquito de todo (la favorita para grupos).</li>
         </ul>
 
+        <div class="alert alert-light mt-4 mb-0" role="alert">
+          <strong>Tip rápido:</strong> Si me dices cuántos invitados esperas y el tipo de evento, te sugiero una combinación
+          ideal para que no se quede “corta” ni se desperdicie.
+        </div>
       </div>
 
       <div class="col-lg-4">
         <div class="card shadow p-4">
           <h4 class="mb-3">Cotización</h4>
-          <p>Haz tu pedido con anticipación.</p>
-          <p class="small mb-2"><strong>WhatsApp:</strong> 222 676 3338</p>
+          <p class="small mb-2">Aparta con anticipación para asegurar fecha y preparación.</p>
+          <p class="small mb-2"><strong>WhatsApp:</strong> <br> 222 676 3338</p>
           <a href="https://wa.me/522226763338" class="btn btn-primary btn-block" target="_blank">Enviar Whats</a>
+        </div>
+
+        <div class="card shadow p-4 mt-4">
+          <h5 class="mb-3">Para cotizar en 1 minuto</h5>
+          <p class="small mb-2">1) Fecha y zona</p>
+          <p class="small mb-2">2) Número de invitados</p>
+          <p class="small mb-0">3) Dulce / Salado / Saludable / Mix</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALERÍA (3 imágenes de referencia) -->
+    <div class="row align-items-end mb-4">
+      <div class="col-lg-8">
+        <h2 class="section-title mb-0">Referencias</h2>
+        <p class="mb-0">Ideas de estilo y presentación (damos forma a tu mesa según tu evento).</p>
+      </div>
+      <div class="col-lg-4 text-lg-right mt-3 mt-lg-0">
+        <a href="https://wa.me/522226763338" class="btn btn-outline-primary" target="_blank">
+          <i class="ti-comment-alt mr-2"></i> Preguntar disponibilidad
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- 01 -->
+      <div class="col-12 col-md-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="snacks" href="images/snacks/snack_01.jpg" title="Mesa de snacks • Referencia 01">
+            <div class="gallery-thumb">
+              <img src="images/snacks/snack_01.jpg" alt="Snack 01">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Estilo fiesta</strong><br>
+            <small>Variedad que se disfruta</small>
+          </div>
         </div>
       </div>
 
+      <!-- 02 -->
+      <div class="col-12 col-md-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="snacks" href="images/snacks/snack_02.jpg" title="Mesa de snacks • Referencia 02">
+            <div class="gallery-thumb">
+              <img src="images/snacks/snack_02.jpg" alt="Snack 02">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Look temático</strong><br>
+            <small>Combina con tus colores</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="col-12 col-md-4 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="snacks" href="images/snacks/snack_03.jpg" title="Mesa de snacks • Referencia 03">
+            <div class="gallery-thumb">
+              <img src="images/snacks/snack_03.jpg" alt="Snack 03">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Para todos</strong><br>
+            <small>Dulce, salado o mix</small>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -76,6 +239,18 @@
 <script src="plugins/counto/counTo.js"></script>
 <script src="plugins/card-slider/js/card-slider-min.js"></script>
 <script src="js/script.js"></script>
+
+<script>
+  $(document).ready(function(){
+    if (window.jQuery && jQuery.fn.venobox) {
+      $('.venobox').venobox({
+        spinner: 'wave',
+        numeratio: true,
+        infinigall: true
+      });
+    }
+  });
+</script>
 
 </body>
 </html>

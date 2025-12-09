@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Mesas de Dulces | Fiestas & Dulces</title>
+  <title>Mesas de Dulces | Cosmos Arte y Sabor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
@@ -11,6 +11,61 @@
   <link rel="stylesheet" href="plugins/venobox/venobox.css">
   <link rel="stylesheet" href="plugins/card-slider/css/style.css">
   <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    /* Galería consistente con tus otras páginas */
+    .pill{
+      display:inline-block;padding:6px 10px;border-radius:999px;
+      background:rgba(0,0,0,.06);font-size:12px;margin-right:8px;margin-bottom:8px;
+    }
+    .gallery-card{
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      transform: translateY(0);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .gallery-card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.12);
+    }
+    .gallery-thumb{
+      position: relative;
+      width: 100%;
+      padding-top: 70%;
+      background: #f6f6f6;
+    }
+    .gallery-thumb img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .gallery-overlay{
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,.35);
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+    .gallery-thumb:hover .gallery-overlay{ opacity: 1; }
+    .gallery-icon{
+      width: 48px;height: 48px;border-radius: 999px;
+      background: rgba(255,255,255,.95);
+      display: inline-flex;align-items: center;justify-content: center;
+      font-size: 18px;color: #000;
+    }
+    .gallery-caption{
+      padding: 12px 14px;
+      border-top: 1px solid rgba(0,0,0,.05);
+    }
+    .gallery-caption small{ opacity: .8; }
+  </style>
 </head>
 
 <body>
@@ -18,48 +73,154 @@
 <div id="site-header"></div>
 
 <section class="page-title bg-cover" data-background="images/backgrounds/page-title.jpg">
-  <div class="container"><div class="row"><div class="col-12 text-center">
-    <h1 class="display-1 text-white font-weight-bold">Mesas de Dulces</h1>
-  </div></div></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="display-1 text-white font-weight-bold">Mesas de Dulces</h1>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="row mb-5">
 
+    <div class="row mb-5">
       <div class="col-lg-8">
-        <h2 class="section-title">Montajes llenos de magia y color</h2>
+        <h2 class="section-title">La mesa que todos visitan (y todos fotografían)</h2>
+
+        <div class="mb-3">
+          <span class="pill">🎨 Temática y colores</span>
+          <span class="pill">🍬 Dulce + mix</span>
+          <span class="pill">✨ Montaje cuidado</span>
+          <span class="pill">📸 Perfecta para fotos</span>
+        </div>
+
         <p class="lead">
-          Creamos mesas de dulces temáticas que se convierten en el centro de atención de tu evento.
-          Perfectas para niños, adultos y celebraciones especiales.
+          En Cosmos armamos mesas que se ven bonitas desde lejos… y se disfrutan de cerca.
+          La idea es que tu mesa no sea “solo dulces”, sino un punto focal del evento:
+          orden, estilo, detalles y variedad para que todos encuentren algo que les guste.
         </p>
 
-        <h4 class="mt-4">Incluye</h4>
+        <p>
+          Podemos irnos por un concepto más dulce, un mix con opciones frescas, o algo más “postre lover”.
+          Tú marcas el estilo, nosotros lo aterrizamos en una mesa que combine con tu fiesta.
+        </p>
+
+        <h4 class="mt-4">¿Qué suele incluir?</h4>
         <ul class="list-unstyled">
-          <li>• Decoración temática completa.</li>
-          <li>• Dulces mexicanos y americanos.</li>
-          <li>• Galletas decoradas.</li>
-          <li>• Mini postres personalizados.</li>
-          <li>• Etiquetas, bases, recipientes y montaje.</li>
+          <li>• Montaje con recipientes, bases y presentación lista para servir.</li>
+          <li>• Selección variada (dulces, postres y/o opciones frescas según el paquete).</li>
+          <li>• Detalles visuales para que combine con tu temática y colores.</li>
+          <li>• Etiquetas y elementos decorativos que “amarran” el concepto de la mesa.</li>
         </ul>
 
         <h4 class="mt-4">Personalización</h4>
-        <p>
-          Cada mesa se diseña a tu gusto: colores, personajes, estilos, temporada o temática especial.
+        <p class="mb-0">
+          Podemos adaptar el concepto por personaje/estilo, temporada, colores específicos o tipo de invitados.
+          Si ya tienes una idea (o una foto de referencia), con eso nos guiamos perfecto.
         </p>
-
       </div>
 
+      <!-- Columna derecha sin Whats/CTA (ya está en el footer) -->
       <div class="col-lg-4">
         <div class="card shadow p-4">
-          <h4 class="mb-3">Cotización</h4>
-          <p class="small mb-2">Envíanos tu idea y armamos algo increíble para tu evento.</p>
-          <p class="small mb-2"><strong>WhatsApp:</strong> 222 676 3338</p>
-          <a href="https://wa.me/522226763338" class="btn btn-primary btn-block" target="_blank">Enviar Whats</a>
+          <h4 class="mb-3">Para planearla fácil</h4>
+          <p class="small mb-3">
+            Para que la mesa quede perfecta, normalmente consideramos estos puntos:
+          </p>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2">• Número de invitados y edades (niños / adultos / mixto).</li>
+            <li class="mb-2">• Temática y colores (o foto de referencia).</li>
+            <li class="mb-2">• Estilo de mesa: dulce, mix o “postres”.</li>
+            <li class="mb-0">• Espacio disponible para montaje.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALERÍA -->
+    <div class="row align-items-end mb-4">
+      <div class="col-lg-8">
+        <h2 class="section-title mb-0">Galería</h2>
+        <p class="mb-0">Da click en cualquier foto para verla en grande.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- 01 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="mesa" href="images/mesa/MesaDeDulces_01.jpg" title="Mesa con opciones frescas">
+            <div class="gallery-thumb">
+              <img src="images/mesa/MesaDeDulces_01.jpg" alt="Mesa de Dulces 01">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Mesa fresca & mix</strong><br>
+            <small>Ligera, colorida y para todos</small>
+          </div>
         </div>
       </div>
 
+      <!-- 02 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="mesa" href="images/mesa/MesaDeDulces_02.jpg" title="Mesa variada para convivir">
+            <div class="gallery-thumb">
+              <img src="images/mesa/MesaDeDulces_02.jpg" alt="Mesa de Dulces 02">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Mesa completa</strong><br>
+            <small>Variedad que nunca falla</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="mesa" href="images/mesa/MesaDeDulces_03.jpg" title="Mesa para amantes del postre">
+            <div class="gallery-thumb">
+              <img src="images/mesa/MesaDeDulces_03.jpg" alt="Mesa de Dulces 03">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Modo postres</strong><br>
+            <small>Un cierre dulce con estilo</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <div class="gallery-card">
+          <a class="venobox" data-gall="mesa" href="images/mesa/MesaDeDulces_04.jpg" title="Mesa tradicional con toque de fiesta">
+            <div class="gallery-thumb">
+              <img src="images/mesa/MesaDeDulces_04.jpg" alt="Mesa de Dulces 04">
+              <div class="gallery-overlay">
+                <span class="gallery-icon"><i class="ti-zoom-in"></i></span>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-caption">
+            <strong>Clásica con toque</strong><br>
+            <small>Tradición, pero bien montada</small>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -73,6 +234,18 @@
 <script src="plugins/counto/counTo.js"></script>
 <script src="plugins/card-slider/js/card-slider-min.js"></script>
 <script src="js/script.js"></script>
+
+<script>
+  $(document).ready(function(){
+    if (window.jQuery && jQuery.fn.venobox) {
+      $('.venobox').venobox({
+        spinner: 'wave',
+        numeratio: true,
+        infinigall: true
+      });
+    }
+  });
+</script>
 
 </body>
 </html>

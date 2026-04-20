@@ -81,14 +81,12 @@
     $(this).replaceWith(video);
   });
 
-
   // Accordions
   $('.collapse').on('shown.bs.collapse', function () {
     $(this).parent().find('.ti-plus').removeClass('ti-plus').addClass('ti-minus');
   }).on('hidden.bs.collapse', function () {
     $(this).parent().find('.ti-minus').removeClass('ti-minus').addClass('ti-plus');
   });
-
 
   // clients logo slider
   $('.client-logo-slider').slick({
@@ -139,7 +137,6 @@
     });
   }
 
-
 })(jQuery);
 
 
@@ -179,6 +176,9 @@ function getMainHeaderHtml() {
         </div>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="personalizados.html">Personalizados</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="about.html">Nosotros</a>
       </li>
       <li class="nav-item">
@@ -197,12 +197,12 @@ function getMainFooterHtml() {
   <div class="container section-sm overlay-secondary-half bg-cover" data-background="images/backgrounds/cta-bg.jpg" style="background-image: url(&quot;images/backgrounds/cta-bg.jpg&quot;);">
     <div class="row">
       <div class="col-lg-8 offset-lg-1">
-        <h2 class="text-gradient-primary">¿Planeamos tu próxima fiesta?</h2>
+        <h2 class="text-gradient-primary">¿Planeamos tu evento o tus personalizados?</h2>
         <p class="h4 font-weight-bold text-white mb-4">
-          Escríbeme por WhatsApp al <span class="text-gradient-primary">222 676 3338</span> y armamos tu paquete ideal.
+          Escríbeme por WhatsApp al <span class="text-gradient-primary">222 676 3338</span> y cotizamos la opción ideal para ti.
         </p>
         <a href="https://wa.me/522226763338" target="_blank" class="btn btn-lg btn-primary">
-          Enviar WhatsApp
+          Cotizar por WhatsApp
         </a>
       </div>
     </div>

@@ -24,6 +24,7 @@
       max-width: 860px;
       margin: 0 auto;
     }
+
     .personalizado-card {
       border-radius: 18px;
       overflow: hidden;
@@ -32,10 +33,12 @@
       height: 100%;
       transition: transform .2s ease, box-shadow .2s ease;
     }
+
     .personalizado-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 18px 40px rgba(0,0,0,.12);
     }
+
     .personalizado-card .icon-wrap {
       width: 84px;
       height: 84px;
@@ -49,13 +52,16 @@
       font-size: 34px;
       box-shadow: 0 10px 25px rgba(247, 70, 58, 0.25);
     }
+
     .personalizado-card .card-body {
       padding: 36px 30px;
     }
+
     .personalizado-card p {
       min-height: 84px;
       margin-bottom: 22px;
     }
+
     .tag-soft {
       display: inline-block;
       padding: 8px 14px;
@@ -66,23 +72,136 @@
       font-weight: 600;
       margin: 0 8px 10px 0;
     }
+
     .cta-box {
       border-radius: 22px;
       background: linear-gradient(135deg, rgba(7,8,93,0.96), rgba(34,36,128,0.92));
       box-shadow: 0 18px 42px rgba(7,8,93,.18);
       overflow: hidden;
     }
+
     .cta-box p,
     .cta-box li,
     .cta-box h2 {
       color: #fff;
     }
+
     .cta-list li {
       margin-bottom: 10px;
     }
+
+    .gallery-modal .modal-content {
+      border: 0;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .gallery-modal .modal-header {
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: #111;
+      padding: 18px 24px;
+    }
+
+    .gallery-modal .modal-title {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .gallery-modal .close {
+      color: #fff;
+      opacity: 1;
+      text-shadow: none;
+    }
+
+    .gallery-modal .modal-body {
+      padding: 0;
+      background: #111;
+    }
+
+    .gallery-slide {
+      position: relative;
+      background: #111;
+    }
+
+    .gallery-slide img {
+      width: 100%;
+      height: 70vh;
+      object-fit: contain;
+      background: #111;
+    }
+
+    .gallery-caption {
+      padding: 16px 20px 22px;
+      text-align: center;
+      color: rgba(255,255,255,.9);
+      background: #111;
+      font-size: 15px;
+    }
+
+    .gallery-empty {
+      color: #fff;
+      text-align: center;
+      padding: 60px 25px;
+    }
+
+    .gallery-empty i {
+      font-size: 42px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .gallery-slider .slick-prev,
+    .gallery-slider .slick-next {
+      z-index: 5;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.16);
+      transition: .2s ease;
+    }
+
+    .gallery-slider .slick-prev:hover,
+    .gallery-slider .slick-next:hover {
+      background: rgba(255,255,255,.28);
+    }
+
+    .gallery-slider .slick-prev {
+      left: 18px;
+    }
+
+    .gallery-slider .slick-next {
+      right: 18px;
+    }
+
+    .gallery-slider .slick-prev:before,
+    .gallery-slider .slick-next:before {
+      font-size: 22px;
+      opacity: 1;
+      color: #fff;
+    }
+
+    .gallery-slider .slick-dots {
+      bottom: 12px;
+    }
+
+    .gallery-slider .slick-dots li button:before {
+      color: #fff;
+      opacity: .45;
+    }
+
+    .gallery-slider .slick-dots li.slick-active button:before {
+      opacity: 1;
+      color: #fff;
+    }
+
     @media (max-width: 767px) {
       .personalizado-card p {
         min-height: auto;
+      }
+
+      .gallery-slide img {
+        height: 48vh;
       }
     }
   </style>
@@ -107,8 +226,8 @@
       <div class="col-12 text-center personalizados-intro">
         <h2 class="section-title">Diseño, impresión y detalles personalizados</h2>
         <p class="lead mb-4">
-          Además de los servicios para fiestas, también trabajamos ideas personalizadas para regalos, eventos, negocios y detalles especiales.
-          Si tienes una idea, la aterrizamos contigo y vemos la mejor forma de producirla.
+          Además de los servicios para fiestas, también trabajamos ideas personalizadas para regalos, eventos,
+          negocios y detalles especiales. Si tienes una idea, la aterrizamos contigo y vemos la mejor forma de producirla.
         </p>
         <div class="section-border"></div>
         <div class="mt-4">
@@ -127,7 +246,12 @@
             <div class="icon-wrap"><i class="ti-write"></i></div>
             <h4 class="mb-3">Invitaciones impresas</h4>
             <p>Diseños para cumpleaños, bautizos, baby shower, bodas y eventos especiales con estilo acorde a tu temática.</p>
-            <a href="https://wa.me/522226763338?text=Hola%2C%20quiero%20cotizar%20invitaciones%20impresas." target="_blank" class="btn btn-outline-primary btn-sm">Cotizar</a>
+            <button type="button"
+              class="btn btn-outline-primary btn-sm open-gallery"
+              data-gallery="invitaciones-impresas"
+              data-title="Invitaciones impresas">
+              Ver ejemplos
+            </button>
           </div>
         </div>
       </div>
@@ -138,7 +262,12 @@
             <div class="icon-wrap"><i class="ti-tablet"></i></div>
             <h4 class="mb-3">Invitaciones digitales</h4>
             <p>Invitaciones para enviar por WhatsApp o redes, con diseño atractivo y listas para compartir rápido con tus invitados.</p>
-            <a href="https://wa.me/522226763338?text=Hola%2C%20quiero%20cotizar%20invitaciones%20digitales." target="_blank" class="btn btn-outline-primary btn-sm">Cotizar</a>
+            <button type="button"
+              class="btn btn-outline-primary btn-sm open-gallery"
+              data-gallery="invitaciones-digitales"
+              data-title="Invitaciones digitales">
+              Ver ejemplos
+            </button>
           </div>
         </div>
       </div>
@@ -149,7 +278,12 @@
             <div class="icon-wrap"><i class="ti-paint-bucket"></i></div>
             <h4 class="mb-3">Estampados</h4>
             <p>Playeras, bolsas, souvenirs y más con propuestas personalizadas para eventos, regalos, marcas o pedidos especiales.</p>
-            <a href="https://wa.me/522226763338?text=Hola%2C%20quiero%20cotizar%20estampados%20personalizados." target="_blank" class="btn btn-outline-primary btn-sm">Cotizar</a>
+            <button type="button"
+              class="btn btn-outline-primary btn-sm open-gallery"
+              data-gallery="estampados"
+              data-title="Estampados">
+              Ver ejemplos
+            </button>
           </div>
         </div>
       </div>
@@ -160,7 +294,12 @@
             <div class="icon-wrap"><i class="ti-image"></i></div>
             <h4 class="mb-3">Sublimados</h4>
             <p>Tazas, textiles y otros productos con impresión personalizada para recuerdos, regalos o detalles con identidad propia.</p>
-            <a href="https://wa.me/522226763338?text=Hola%2C%20quiero%20cotizar%20sublimados%20personalizados." target="_blank" class="btn btn-outline-primary btn-sm">Cotizar</a>
+            <button type="button"
+              class="btn btn-outline-primary btn-sm open-gallery"
+              data-gallery="sublimados"
+              data-title="Sublimados">
+              Ver ejemplos
+            </button>
           </div>
         </div>
       </div>
@@ -171,7 +310,12 @@
             <div class="icon-wrap"><i class="ti-ruler-pencil"></i></div>
             <h4 class="mb-3">Corte láser</h4>
             <p>Piezas decorativas, letreros, recuerdos y detalles en materiales compatibles con corte fino y acabado más preciso.</p>
-            <a href="https://wa.me/522226763338?text=Hola%2C%20quiero%20cotizar%20corte%20l%C3%A1ser." target="_blank" class="btn btn-outline-primary btn-sm">Cotizar</a>
+            <button type="button"
+              class="btn btn-outline-primary btn-sm open-gallery"
+              data-gallery="corte-laser"
+              data-title="Corte láser">
+              Ver ejemplos
+            </button>
           </div>
         </div>
       </div>
@@ -182,7 +326,12 @@
             <div class="icon-wrap"><i class="ti-cut"></i></div>
             <h4 class="mb-3">Plotter de corte</h4>
             <p>Viniles, etiquetas, nombres, frases decorativas y aplicaciones personalizadas para eventos, empaques o negocio.</p>
-            <a href="https://wa.me/522226763338?text=Hola%2C%20quiero%20cotizar%20trabajos%20en%20plotter%20de%20corte." target="_blank" class="btn btn-outline-primary btn-sm">Cotizar</a>
+            <button type="button"
+              class="btn btn-outline-primary btn-sm open-gallery"
+              data-gallery="plotter-corte"
+              data-title="Plotter de corte">
+              Ver ejemplos
+            </button>
           </div>
         </div>
       </div>
@@ -215,6 +364,22 @@
 
 <div id="site-footer"></div>
 
+<div class="modal fade gallery-modal" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="galleryModalLabel">Ejemplos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="gallerySlider" class="gallery-slider"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="plugins/jQuery/jquery.min.js"></script>
 <script src="plugins/bootstrap/bootstrap.min.js"></script>
 <script src="plugins/slick/slick.min.js"></script>
@@ -223,6 +388,110 @@
 <script src="plugins/counto/counTo.js"></script>
 <script src="plugins/card-slider/js/card-slider-min.js"></script>
 <script src="js/script.js"></script>
+
+<script>
+  // ============================================
+  // Cambia estas rutas por tus imágenes reales
+  // ============================================
+  var galleryData = {
+    'invitaciones-impresas': [
+      { src: 'images/personalizados/invitaciones-impresas/1.jpg', caption: 'Ejemplo 1 de invitación impresa' },
+      { src: 'images/personalizados/invitaciones-impresas/2.jpg', caption: 'Ejemplo 2 de invitación impresa' },
+      { src: 'images/personalizados/invitaciones-impresas/3.jpg', caption: 'Ejemplo 3 de invitación impresa' }
+    ],
+    'invitaciones-digitales': [
+      { src: 'images/personalizados/invitaciones-digitales/1.jpg', caption: 'Ejemplo 1 de invitación digital' },
+      { src: 'images/personalizados/invitaciones-digitales/2.jpg', caption: 'Ejemplo 2 de invitación digital' },
+      { src: 'images/personalizados/invitaciones-digitales/3.jpg', caption: 'Ejemplo 3 de invitación digital' }
+    ],
+    'estampados': [
+      { src: 'images/personalizados/estampados/1.jpg', caption: 'Ejemplo 1 de estampado' },
+      { src: 'images/personalizados/estampados/2.jpg', caption: 'Ejemplo 2 de estampado' },
+      { src: 'images/personalizados/estampados/3.jpg', caption: 'Ejemplo 3 de estampado' }
+    ],
+    'sublimados': [
+      { src: 'images/personalizados/sublimados/1.jpg', caption: 'Ejemplo 1 de sublimado' },
+      { src: 'images/personalizados/sublimados/2.jpg', caption: 'Ejemplo 2 de sublimado' },
+      { src: 'images/personalizados/sublimados/3.jpg', caption: 'Ejemplo 3 de sublimado' }
+    ],
+    'corte-laser': [
+      { src: 'images/personalizados/corte-laser/1.jpg', caption: 'Ejemplo 1 de corte láser' },
+      { src: 'images/personalizados/corte-laser/2.jpg', caption: 'Ejemplo 2 de corte láser' },
+      { src: 'images/personalizados/corte-laser/3.jpg', caption: 'Ejemplo 3 de corte láser' }
+    ],
+    'plotter-corte': [
+      { src: 'images/personalizados/plotter-corte/1.jpg', caption: 'Ejemplo 1 de plotter de corte' },
+      { src: 'images/personalizados/plotter-corte/2.jpg', caption: 'Ejemplo 2 de plotter de corte' },
+      { src: 'images/personalizados/plotter-corte/3.jpg', caption: 'Ejemplo 3 de plotter de corte' }
+    ]
+  };
+
+  function buildGallerySlides(galleryKey) {
+    var $slider = $('#gallerySlider');
+    var slides = galleryData[galleryKey] || [];
+
+    if ($slider.hasClass('slick-initialized')) {
+      $slider.slick('unslick');
+    }
+
+    $slider.html('');
+
+    if (!slides.length) {
+      $slider.html(
+        '<div class="gallery-empty">' +
+          '<i class="ti-gallery"></i>' +
+          '<h4 class="text-white mb-3">Aún no hay ejemplos cargados</h4>' +
+          '<p class="mb-0">Sube tus imágenes y agrega sus rutas en la variable <strong>galleryData</strong>.</p>' +
+        '</div>'
+      );
+      return;
+    }
+
+    slides.forEach(function (item) {
+      $slider.append(
+        '<div class="gallery-slide">' +
+          '<img src="' + item.src + '" alt="' + item.caption + '">' +
+          '<div class="gallery-caption">' + item.caption + '</div>' +
+        '</div>'
+      );
+    });
+
+    $slider.slick({
+      dots: true,
+      arrows: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true
+    });
+  }
+
+  $(document).ready(function () {
+    $('.open-gallery').on('click', function () {
+      var galleryKey = $(this).data('gallery');
+      var title = $(this).data('title');
+
+      $('#galleryModalLabel').text(title);
+      buildGallerySlides(galleryKey);
+      $('#galleryModal').modal('show');
+    });
+
+    $('#galleryModal').on('shown.bs.modal', function () {
+      var $slider = $('#gallerySlider');
+      if ($slider.hasClass('slick-initialized')) {
+        $slider.slick('setPosition');
+      }
+    });
+
+    $('#galleryModal').on('hidden.bs.modal', function () {
+      var $slider = $('#gallerySlider');
+      if ($slider.hasClass('slick-initialized')) {
+        $slider.slick('unslick');
+      }
+      $slider.html('');
+    });
+  });
+</script>
 
 </body>
 </html>

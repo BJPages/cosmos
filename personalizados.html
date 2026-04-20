@@ -92,14 +92,15 @@
 
     .gallery-modal .modal-content {
       border: 0;
-      border-radius: 20px;
+      border-radius: 22px;
       overflow: hidden;
-      background: #111;
+      background: #0f1020;
+      box-shadow: 0 20px 50px rgba(0,0,0,.3);
     }
 
     .gallery-modal .modal-header {
       border-bottom: 1px solid rgba(255,255,255,.08);
-      background: #111;
+      background: linear-gradient(135deg, rgba(22,24,58,1), rgba(15,16,32,1));
       padding: 18px 24px;
     }
 
@@ -112,37 +113,145 @@
       color: #fff;
       opacity: 1;
       text-shadow: none;
+      font-size: 28px;
+      line-height: 1;
     }
 
     .gallery-modal .modal-body {
       padding: 0;
-      background: #111;
+      background: #0f1020;
+    }
+
+    .gallery-stage {
+      padding: 22px 22px 16px;
+      background: #0f1020;
+    }
+
+    .gallery-slider-shell {
+      border-radius: 18px;
+      overflow: hidden;
+      background: #111322;
+      border: 1px solid rgba(255,255,255,.06);
     }
 
     .gallery-slide {
       position: relative;
-      background: #111;
+      background: #111322;
     }
 
     .gallery-slide img {
       width: 100%;
-      height: 70vh;
+      height: 64vh;
       object-fit: contain;
-      background: #111;
+      background: #111322;
     }
 
     .gallery-caption {
-      padding: 16px 20px 22px;
+      padding: 14px 18px 18px;
       text-align: center;
-      color: rgba(255,255,255,.9);
-      background: #111;
+      color: rgba(255,255,255,.88);
+      background: #111322;
       font-size: 15px;
+    }
+
+    .gallery-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 18px 4px 6px;
+      flex-wrap: nowrap;
+    }
+
+    .gallery-nav-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 18px;
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: .2s ease;
+      min-width: 132px;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .gallery-nav-btn:hover {
+      background: rgba(255,255,255,.15);
+    }
+
+    .gallery-nav-btn:focus {
+      outline: none;
+    }
+
+    .gallery-nav-btn[disabled] {
+      opacity: .38;
+      cursor: not-allowed;
+    }
+
+    .gallery-nav-btn i {
+      font-size: 14px;
+    }
+
+    .gallery-center-ui {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .gallery-counter-text {
+      color: rgba(255,255,255,.86);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      white-space: nowrap;
+    }
+
+    .gallery-dots-custom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .gallery-dot-btn {
+      border: 0;
+      min-width: 42px;
+      height: 42px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.78);
+      font-weight: 700;
+      font-size: 13px;
+      transition: .2s ease;
+    }
+
+    .gallery-dot-btn:hover {
+      background: rgba(255,255,255,.14);
+      color: #fff;
+    }
+
+    .gallery-dot-btn.active {
+      background: linear-gradient(37deg, rgb(180, 62, 121) 1%, rgb(247, 70, 58) 100%);
+      color: #fff;
+      box-shadow: 0 10px 22px rgba(247, 70, 58, 0.28);
     }
 
     .gallery-empty {
       color: #fff;
       text-align: center;
-      padding: 60px 25px;
+      padding: 70px 25px;
     }
 
     .gallery-empty i {
@@ -151,48 +260,22 @@
       display: block;
     }
 
-    .gallery-slider .slick-prev,
-    .gallery-slider .slick-next {
-      z-index: 5;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.16);
-      transition: .2s ease;
-    }
+    @media (max-width: 991px) {
+      .gallery-controls {
+        gap: 10px;
+      }
 
-    .gallery-slider .slick-prev:hover,
-    .gallery-slider .slick-next:hover {
-      background: rgba(255,255,255,.28);
-    }
+      .gallery-nav-btn {
+        min-width: 112px;
+        padding: 11px 14px;
+        font-size: 14px;
+      }
 
-    .gallery-slider .slick-prev {
-      left: 18px;
-    }
-
-    .gallery-slider .slick-next {
-      right: 18px;
-    }
-
-    .gallery-slider .slick-prev:before,
-    .gallery-slider .slick-next:before {
-      font-size: 22px;
-      opacity: 1;
-      color: #fff;
-    }
-
-    .gallery-slider .slick-dots {
-      bottom: 12px;
-    }
-
-    .gallery-slider .slick-dots li button:before {
-      color: #fff;
-      opacity: .45;
-    }
-
-    .gallery-slider .slick-dots li.slick-active button:before {
-      opacity: 1;
-      color: #fff;
+      .gallery-dot-btn {
+        min-width: 38px;
+        height: 38px;
+        font-size: 12px;
+      }
     }
 
     @media (max-width: 767px) {
@@ -200,8 +283,61 @@
         min-height: auto;
       }
 
+      .gallery-stage {
+        padding: 16px 16px 12px;
+      }
+
       .gallery-slide img {
-        height: 48vh;
+        height: 44vh;
+      }
+
+      .gallery-controls {
+        align-items: center;
+        gap: 8px;
+      }
+
+      .gallery-center-ui {
+        gap: 8px;
+      }
+
+      .gallery-counter-text {
+        font-size: 12px;
+        padding: 9px 12px;
+      }
+
+      .gallery-dot-btn {
+        min-width: 34px;
+        height: 34px;
+        padding: 0 10px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .gallery-nav-btn {
+        min-width: auto;
+        padding: 11px 13px;
+      }
+
+      .gallery-nav-btn span {
+        display: none;
+      }
+
+      .gallery-counter-text {
+        display: none;
+      }
+
+      .gallery-center-ui {
+        justify-content: center;
+      }
+
+      .gallery-dots-custom {
+        gap: 6px;
+      }
+
+      .gallery-dot-btn {
+        min-width: 32px;
+        height: 32px;
+        font-size: 11px;
       }
     }
   </style>
@@ -374,7 +510,29 @@
         </button>
       </div>
       <div class="modal-body">
-        <div id="gallerySlider" class="gallery-slider"></div>
+        <div class="gallery-stage">
+          <div class="gallery-slider-shell">
+            <div id="gallerySlider" class="gallery-slider"></div>
+          </div>
+
+          <div class="gallery-controls">
+            <button type="button" class="gallery-nav-btn" id="galleryPrevBtn">
+              <i class="ti-angle-left"></i>
+              <span>Anterior</span>
+            </button>
+
+            <div class="gallery-center-ui">
+              <div class="gallery-counter-text" id="galleryCounterText">01 / 01</div>
+              <div class="gallery-dots-custom" id="galleryDotsCustom"></div>
+            </div>
+
+            <button type="button" class="gallery-nav-btn" id="galleryNextBtn">
+              <span>Siguiente</span>
+              <i class="ti-angle-right"></i>
+            </button>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
@@ -390,9 +548,6 @@
 <script src="js/script.js"></script>
 
 <script>
-  // ============================================
-  // Cambia estas rutas por tus imágenes reales
-  // ============================================
   var galleryData = {
     'invitaciones-impresas': [
       { src: 'images/personalizados/invitaciones-impresas/1.jpg', caption: 'Ejemplo 1 de invitación impresa' },
@@ -426,6 +581,40 @@
     ]
   };
 
+  function formatSlideNumber(num) {
+    return num < 10 ? '0' + num : String(num);
+  }
+
+  function renderGalleryDots(total) {
+    var $dots = $('#galleryDotsCustom');
+    $dots.html('');
+
+    if (total <= 1) {
+      return;
+    }
+
+    for (var i = 0; i < total; i++) {
+      $dots.append(
+        '<button type="button" class="gallery-dot-btn" data-slide="' + i + '">' +
+          formatSlideNumber(i + 1) +
+        '</button>'
+      );
+    }
+  }
+
+  function updateGalleryUi(currentIndex, total) {
+    $('#galleryCounterText').text(formatSlideNumber(currentIndex + 1) + ' / ' + formatSlideNumber(total));
+
+    $('.gallery-dot-btn').removeClass('active');
+    $('.gallery-dot-btn[data-slide="' + currentIndex + '"]').addClass('active');
+
+    var disablePrev = total <= 1;
+    var disableNext = total <= 1;
+
+    $('#galleryPrevBtn').prop('disabled', disablePrev);
+    $('#galleryNextBtn').prop('disabled', disableNext);
+  }
+
   function buildGallerySlides(galleryKey) {
     var $slider = $('#gallerySlider');
     var slides = galleryData[galleryKey] || [];
@@ -435,6 +624,8 @@
     }
 
     $slider.html('');
+    $('#galleryDotsCustom').html('');
+    $('#galleryCounterText').text('00 / 00');
 
     if (!slides.length) {
       $slider.html(
@@ -444,6 +635,8 @@
           '<p class="mb-0">Sube tus imágenes y agrega sus rutas en la variable <strong>galleryData</strong>.</p>' +
         '</div>'
       );
+      $('#galleryPrevBtn').prop('disabled', true);
+      $('#galleryNextBtn').prop('disabled', true);
       return;
     }
 
@@ -456,9 +649,19 @@
       );
     });
 
+    renderGalleryDots(slides.length);
+
+    $slider.on('init', function (event, slick) {
+      updateGalleryUi(slick.currentSlide || 0, slick.slideCount);
+    });
+
+    $slider.on('afterChange', function (event, slick, currentSlide) {
+      updateGalleryUi(currentSlide, slick.slideCount);
+    });
+
     $slider.slick({
-      dots: true,
-      arrows: true,
+      dots: false,
+      arrows: false,
       infinite: true,
       speed: 300,
       slidesToShow: 1,
@@ -476,6 +679,29 @@
       $('#galleryModal').modal('show');
     });
 
+    $('#galleryPrevBtn').on('click', function () {
+      var $slider = $('#gallerySlider');
+      if ($slider.hasClass('slick-initialized')) {
+        $slider.slick('slickPrev');
+      }
+    });
+
+    $('#galleryNextBtn').on('click', function () {
+      var $slider = $('#gallerySlider');
+      if ($slider.hasClass('slick-initialized')) {
+        $slider.slick('slickNext');
+      }
+    });
+
+    $(document).on('click', '.gallery-dot-btn', function () {
+      var target = Number($(this).data('slide'));
+      var $slider = $('#gallerySlider');
+
+      if ($slider.hasClass('slick-initialized')) {
+        $slider.slick('slickGoTo', target);
+      }
+    });
+
     $('#galleryModal').on('shown.bs.modal', function () {
       var $slider = $('#gallerySlider');
       if ($slider.hasClass('slick-initialized')) {
@@ -485,10 +711,16 @@
 
     $('#galleryModal').on('hidden.bs.modal', function () {
       var $slider = $('#gallerySlider');
+
+      $slider.off('init afterChange');
+
       if ($slider.hasClass('slick-initialized')) {
         $slider.slick('unslick');
       }
+
       $slider.html('');
+      $('#galleryDotsCustom').html('');
+      $('#galleryCounterText').text('00 / 00');
     });
   });
 </script>
